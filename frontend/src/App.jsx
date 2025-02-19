@@ -6,6 +6,8 @@ import Cart from './pages/cart/cart.jsx'
 import PlaceOrder from './pages/placeOrder/placeOrder.jsx'
 import Footer from '../src/component/footer/Footer.jsx'
 import Login from './component/login/Login.jsx'
+import Verify from "./pages/verify/verify.jsx"
+import MyOrders from "./pages/myorder/myOrder.jsx"
 
  
  const App = () => {
@@ -20,8 +22,9 @@ import Login from './component/login/Login.jsx'
           <Route path='/' element={<Home/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/place-order' element={<PlaceOrder/>}/>
+          <Route path="/verify" element={<Verify/>}/> 
+          <Route path="/myorders" element={<MyOrders/>}/> 
       </Routes>
-     
    </div> 
    <Footer/>
   </>

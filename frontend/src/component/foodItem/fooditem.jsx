@@ -2,11 +2,15 @@ import React, { useContext } from 'react'
 import './fooditem.css'
 import { assets } from '../../assets/assets'
 import { storeContex } from '../../contex/storeContex'
+ 
 
 const  FoodItem = ({id,name,price,description,image}) => {
     const {addTocart,cartItem, RemoveCartItems,url}=useContext(storeContex)
     let newUrl=url+"/image/"
+    // console.log(cartItem.id)
   return (
+    
+    
     <div className='food-item'>
       <div className="food-item-img-container">
         <img className='food-item-iamge' src={newUrl+image} alt="" />
@@ -26,7 +30,7 @@ const  FoodItem = ({id,name,price,description,image}) => {
             <img src={assets.rating_starts} alt="" />
         </div>
         <p className="food-item-desc">{description}</p>
-        <p className="food-item-price">${price}</p>
+        <p className="food-item-price">{price}</p>
       </div>
     </div>
   )

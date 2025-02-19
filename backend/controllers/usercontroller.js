@@ -44,29 +44,28 @@ import express from 'express'
    }
  }
 
- const loginUser=async (req,res)=>{
- const {email,password}=req.body
+ const loginUser = async (req, res) => {
+   const { email, password } = req.body;
+
    try {
-      const user= await userModel.findOne({email})
-      if(!user){
-         res.json({success:false,message:"user dosn't exist"})
+      const user = await userModel.findOne({ email });
+      if (!user) {
+         return res.json({ success: false, message: "User doesn't exist" }); // Add return here
       }
-     
-      const matching=await bcrypt.compare(password,user.password)
-        
-      if(!matching){
-         res.json({success:false,message:"user dosn't exist"})
+
+      const matching = await bcrypt.compare(password, user.password);
+      if (!matching) {
+         return res.json({ success: false, message: "Invalid credentials" }); // Add return here
       }
-       
-      const token = createToken(user._id)
-      res.json({success:true,token,message:'login successfully'})
+
+      const token = createToken(user._id);
+      res.json({ success: true, token, message: "Login successfully" });
 
    } catch (error) {
-      console.log("error in login ")
-      res.json({success:false,message:"error in login"})
+      console.log("Error in login:", error);
+      res.status(500).json({ success: false, message: "Error in login" });
    }
-  
-  
- }   
+};
+
 
  export {loginUser,registerUser}

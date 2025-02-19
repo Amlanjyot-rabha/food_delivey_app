@@ -5,6 +5,7 @@ import foodRouter from "./routes/foodrouter.js"
 import userRouter from "./routes/userrouter.js"
 import "dotenv/config"
 import cartRouter from "./routes/cartrouter.js"
+import orderRouter from "./routes/orderrouter.js"
 
  
 const app =express()
@@ -24,6 +25,7 @@ app.use('/api/user',userRouter)
 app.use('/api/food',foodRouter)
 app.use('/image',express.static('uploads'))
 app.use('/api/cart',cartRouter)
+app.use('/api/order',orderRouter)
 
 
 app.listen(port,()=>{
