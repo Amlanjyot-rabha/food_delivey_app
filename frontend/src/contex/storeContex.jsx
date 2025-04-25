@@ -10,7 +10,7 @@ export const storeContex=createContext(null)
 const StoreContexProvider=(props)=>{
     const[cartItem,setCartItem]=useState({})
     const [token,setToken]=useState("")
-     const url="http://localhost:4000"
+     const url="https://food-delivey-app-3.onrender.com"
     const [food_list,setFood_list]=useState([])
 
     const addTocart= async (itemId)=>{
