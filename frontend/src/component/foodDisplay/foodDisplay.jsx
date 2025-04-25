@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import './FoodDisplay.css'
+import './foodDisplay.css'
 import { storeContex } from '../../contex/storeContex'
 import FoodItem from '../foodItem/fooditem.jsx'
 // import axios from 'axios'
