@@ -9,7 +9,7 @@
 }
 .explore-menu-text{
     max-width: 60%;
-    color: #808080;
+    color: #000000;
 }
 .explore-menu-list{
     display: flex;
@@ -19,7 +19,14 @@
     gap: 30px;
     margin: 20px 0px;
     overflow-x: scroll;
+    /* background-color: rgb(34, 34, 34); */
+    padding: 20px;
+    border-radius: 50px;
+     
     /* padding: 2px; */
+}
+.foodname{
+    color: rgb(0, 0, 0) !important;
 }
 .explore-menu-list::-webkit-scrollbar{
     display: none;
@@ -33,7 +40,7 @@
 }
 .explore-menu-list-item p{
     margin-top: 10px;
-    color: #747474;
+    color: #ffffff;
     font-size: max(1.4vw,16px);
     cursor: pointer;
 }

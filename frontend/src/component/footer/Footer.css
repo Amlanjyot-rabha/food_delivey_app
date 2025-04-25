@@ -21,6 +21,10 @@
     align-items: start;
     gap: 20px;
 }
+.Footer-content-left img{
+    width: 130px;
+    height: 40px;
+}
 
 .Footer-content-left li, .Footer-content-center li, .Footer-content-right li{
     list-style: none;
