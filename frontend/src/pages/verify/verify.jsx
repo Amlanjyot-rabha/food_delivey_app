@@ -24,8 +24,11 @@ const Verify=()=>{
     }
  
     useEffect(()=>{
-      paymentVerify()
-    },[])
+        if(success && orderId){
+             paymentVerify()
+        }
+      
+    },[success,orderId])
 
     return(
      <div className='verify'>
